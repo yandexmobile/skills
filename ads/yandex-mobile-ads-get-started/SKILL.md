@@ -36,8 +36,8 @@ metadata:
    - Version 8.x or newer is present: skip the dependency step, but still check
      the privacy settings and the initialization below.
    - Version 7.x or older is present: stop and tell the user to migrate to
-     SDK 8 first with the `migrate-yandex-ads-sdk-android-from-7-to-8` or
-     `migrate-yandex-ads-sdk-ios-from-7-to-8` skill from this set.
+     SDK 8 first with the `yandex-mobile-ads-android-migrate-to-8` or
+     `yandex-mobile-ads-ios-migrate-to-8` skill from this set.
 
 3. **Read the platform guide**:
    - Android: `references/android-get-started.md`

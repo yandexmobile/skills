@@ -1,5 +1,5 @@
 ---
-name: migrate-yandex-ads-sdk-ios-from-7-to-8
+name: yandex-mobile-ads-ios-migrate-to-8
 description: >-
   Migrates an iOS app from YandexMobileAds SDK 7.x to 8.x: updates
   dependencies and rewrites the code that uses removed or renamed API. Use when
@@ -47,10 +47,14 @@ If the project does not meet these requirements, notify the user before proceedi
 
 ## Scripts
 
-Shell scripts in [`scripts/`](scripts/) automate mechanical renames and verification. Run from the **host app root** (directory with `Podfile` / `.xcodeproj`):
+Shell scripts in [`scripts/`](scripts/) automate mechanical renames and verification. Run from the **host app root** (directory with `Podfile` / `.xcodeproj`).
+
+Set `MIGRATION_PACK` to the directory that contains this `SKILL.md`. Its location depends on where the skill is
+installed, for example `.claude/skills/yandex-mobile-ads-ios-migrate-to-8` or
+`.agents/skills/yandex-mobile-ads-ios-migrate-to-8` inside the app project. The step files use the same variable.
 
 ```bash
-MIGRATION_PACK="../migrate-yandex-ads-sdk-ios-from-7-to-8"
+MIGRATION_PACK="<directory that contains this SKILL.md>"
 
 # Step 3: Apply all mechanical renames
 bash "$MIGRATION_PACK/scripts/apply_mechanical_renames.sh" .
