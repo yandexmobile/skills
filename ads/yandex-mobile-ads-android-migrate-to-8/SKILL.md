@@ -1,5 +1,5 @@
 ---
-name: migrate-yandex-ads-sdk-android-from-7-to-8
+name: yandex-mobile-ads-android-migrate-to-8
 description: >-
   Migrates a native Android app from Yandex Mobile Ads SDK 7.x to 8.x: updates
   dependencies and rewrites the code that uses removed or renamed API. Use when

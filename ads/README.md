@@ -35,8 +35,8 @@ npx skills update
 | `yandex-mobile-ads-rewarded` | Adds a rewarded ad behind a button that offers a reward. | *Give the user 50 coins for watching a Yandex rewarded ad* |
 | `yandex-mobile-ads-app-open` | Adds an app open ad shown when the user returns to the app. | *Show a Yandex app open ad when the user returns to the app* |
 | `yandex-mobile-ads-native` | Adds native ads rendered with the app's own views, for example in a feed. | *Insert Yandex native ads into the news feed every 10 items* |
-| `migrate-yandex-ads-sdk-android-from-7-to-8` | Migrates an Android app from SDK 7.x to 8.x. | *Migrate my project to Yandex Mobile Ads SDK 8* |
-| `migrate-yandex-ads-sdk-ios-from-7-to-8` | Migrates an iOS app from SDK 7.x to 8.x. | *Migrate my project from Yandex Mobile Ads SDK 7.x to 8.x* |
+| `yandex-mobile-ads-android-migrate-to-8` | Migrates an Android app from SDK 7.x to 8.x. | *Migrate my project to Yandex Mobile Ads SDK 8* |
+| `yandex-mobile-ads-ios-migrate-to-8` | Migrates an iOS app from SDK 7.x to 8.x. | *Migrate my project from Yandex Mobile Ads SDK 7.x to 8.x* |
 
 ## Ad unit IDs
 
