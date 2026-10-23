@@ -43,6 +43,34 @@ levels, after a completed action, on a transition between screens.
   one, use it as is and do not add the demo ID.
 - Keep the ID in one constant per placement so it is easy to replace.
 
+## iOS API selection
+
+Choose the integration style before applying the iOS examples:
+
+1. Read the applicable `AGENTS.md`, `CLAUDE.md` and scoped project rules.
+   Respect the user's stated preference; explicit project rules take priority
+   over the style of an example or nearby code.
+2. Inspect the target screen, view model or service and similar operations
+   nearby: async/await or completion handlers, task ownership, cancellation
+   and actor isolation. Prefer local conventions over a project-wide count
+   of API usages.
+3. For SDK APIs that offer both forms, use async/await where it fits the
+   project's concurrency model, or completion where callbacks fit. Use the
+   block API for Objective-C; verify its selector in the installed SDK header.
+   Keep SDK SwiftUI views/modifiers when they fit the screen and format rules;
+   they do not require a manual loader just to choose async or completion.
+4. If rules and code leave the choice unclear (mixed styles or a new module),
+   explain the tradeoff, recommend an approach and ask one focused question
+   before implementing it. Do not ask again if the user already chose.
+
+The snippets demonstrate SDK behavior, not a mandatory API style. Adapt both
+loading and startup/ATT readiness to the selected approach. For async work,
+define who owns a task and when it is cancelled; a synchronous lifecycle
+method may start a task when that fits the project. For completion code,
+continue from the project's readiness callback instead of adding a task just
+to copy an async example. Preserve error handling, main-actor UI updates and
+existing async/completion bridges at module boundaries.
+
 ## Workflow
 
 1. **Determine the platform and the UI toolkit** from the project files.

@@ -1,5 +1,8 @@
 # AI Integration Agent Instructions for the Yandex Mobile Ads SDK on iOS
 
+Apply [iOS API selection](../SKILL.md#ios-api-selection) before using
+these examples. Adapt the snippets to the selected project conventions.
+
 ## Required Imports
 
 ```swift
@@ -166,9 +169,11 @@ the app's own code.
        as a Run Script phase above **Copy Bundle Resources**, **Based on
        dependency analysis** unchecked, `Info.plist` in its input and output
        files when `ENABLE_USER_SCRIPT_SANDBOXING = YES`.
-   - [ ] **Ads startup gate.** Add this once; the format guides await it before
-     the first load. It waits until the app is active (the ATT prompt does not
-     show earlier). Set `shouldRequestTracking = true` only if the user asks
+   - [ ] **Ads startup gate.** Reuse the project's readiness flow if it has
+     one. Otherwise add a gate in the selected async or completion style
+     before the first load. It waits until the app is active (the ATT prompt
+     does not show earlier). The async example below uses `AdsStartup`.
+     Set `shouldRequestTracking = true` only if the user asks
      for ATT or the app uses it, and add `NSUserTrackingUsageDescription`
      (`/usr/libexec/PlistBuddy -c "Add :NSUserTrackingUsageDescription string <purpose the user approves>" MyApp/Info.plist`).
      The prompt appears once per install.
@@ -194,10 +199,17 @@ the app's own code.
      }
      ```
 
-     Call `await AdsStartup.waitUntilReady()` from the first screen
-     (`viewDidAppear` or `.task`), so the prompt appears there. If the
-     project does not use synchronized folders, add the new file to the app
-     target.
+     With async integration, call `await AdsStartup.waitUntilReady()` from
+     the first screen's owned task (`viewDidAppear` or `.task`), so the
+     prompt appears there. With completion integration, use the project's
+     readiness callback. If it has none, implement the same gate with an
+     app-active lifecycle callback/notification and ATT's completion-handler
+     API: collect waiting loads, request ATT once if needed, then release
+     the waiting loads on the main actor. Do not introduce `Task` solely to
+     wrap this async example. Neither gate waits for SDK initialization;
+     ad loads already wait for SDK configuration themselves.
+     If the project does not use synchronized folders, add the new file to
+     the app target.
 
 3. **Apply privacy settings**
 
@@ -212,9 +224,9 @@ the app's own code.
 
 4. **Initialize the SDK**
 
-   - [ ] Add to the existing `application(_:didFinishLaunchingWithOptions:)`,
-     or to `App.init()` in a SwiftUI app without an app delegate (with
-     `Task { await YandexAds.initializeSDK() }`):
+   - [ ] Apply privacy settings in the existing app startup flow, before
+     initialization and the first request. Use the applicable settings
+     from step 3; these names stand for the app's own values:
 
      ```swift
      if let consent = appConsent.adsConsent {
@@ -223,8 +235,19 @@ the app's own code.
      if AppConfig.isChildDirected {
          YandexAds.setAgeRestricted(true)
      }
-     YandexAds.initializeSDK(completionHandler: nil)
      ```
+
+   - [ ] Initialize once using the style selected from project rules and
+     nearby code, independently of whether the app uses UIKit or SwiftUI:
+     - Completion: `YandexAds.initializeSDK(completionHandler: nil)` in the
+       existing startup callback, or pass a completion handler if the app
+       needs to observe initialization finishing.
+     - Async: `await YandexAds.initializeSDK()` in the chosen async startup
+       flow. If its entry point is synchronous (`didFinishLaunching` or
+       `App.init()`), start a task only when consistent with the selected
+       project approach, with an explicit owner/lifetime.
+
+     Preserve the order: privacy settings, initialization, ad requests.
 
    - [ ] Debug builds only: `YandexAds.enableLogging()` (Xcode console; warnings
      that mediation adapters or consent management are not integrated are

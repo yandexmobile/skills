@@ -1,5 +1,8 @@
 # AI Integration Agent Instructions for iOS Rewarded Ads
 
+Apply [iOS API selection](../SKILL.md#ios-api-selection) before using
+these examples. Adapt the snippets to the selected project conventions.
+
 ## Required Imports
 
 ```swift
@@ -12,6 +15,7 @@ import YandexMobileAds
 ```swift
 RewardedAdLoader()
 func loadAd(with request: AdRequest) async throws -> RewardedAd
+func loadAd(with request: AdRequest, completion: @escaping @MainActor (Result<RewardedAd, Error>) -> Void)
 
 @MainActor final class RewardedAd {
     weak var delegate: RewardedAdDelegate?
@@ -23,6 +27,12 @@ protocol Reward { var amount: Int { get }; var type: String { get } }
 
 `RewardedAdDelegate` (`@MainActor`) has six required methods, listed in
 step 3.
+
+For completion-based integration, call `loadAd(with:completion:)` from
+the selected startup-ready callback. Move the example's success/error
+handling into the `Result` switch, retain the ad and assign its delegate
+on success, and clear the loading flag on both paths. The outer `Task`
+is only needed for the async version.
 
 ## Gotchas
 
@@ -91,9 +101,11 @@ snippets are placeholders for the app's own code.
      }
      ```
 
-   - [ ] If the project has `AdsStartup` (from get-started), keep
-     `await AdsStartup.waitUntilReady()` before the first load; otherwise
-     drop that line.
+   - [ ] Gate the first load on the project's startup/ATT readiness flow.
+     The async example uses `await AdsStartup.waitUntilReady()` from
+     get-started; a completion-based flow starts the load from its
+     readiness callback. Omit this gate only if readiness is already
+     handled elsewhere or no gate is needed.
 
 3. **Register for ad events and grant the reward in the reward callback**
 

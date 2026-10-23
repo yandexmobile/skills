@@ -1,5 +1,8 @@
 # AI Integration Agent Instructions for iOS Native Ads
 
+Apply [iOS API selection](../SKILL.md#ios-api-selection) before using
+these examples. Adapt the snippets to the selected project conventions.
+
 ## Required Imports
 
 ```swift
@@ -12,8 +15,10 @@ import YandexMobileAds
 ```swift
 NativeBulkAdLoader()
 func loadAds(with request: AdRequest, adsCount: UInt, options: NativeAdOptions = .init()) async throws -> [NativeAd]
+func loadAds(with request: AdRequest, adsCount: UInt, options: NativeAdOptions = .init(), completion: @escaping @MainActor (Result<[NativeAd], Error>) -> Void)
 NativeAdLoader()
 func loadAd(with request: AdRequest, options: NativeAdOptions = .init()) async throws -> NativeAd
+func loadAd(with request: AdRequest, options: NativeAdOptions = .init(), completion: @escaping @MainActor (Result<NativeAd, Error>) -> Void)
 
 @MainActor protocol NativeAd: NSObjectProtocol {
     var delegate: NativeAdDelegate? { get set }   // weak
@@ -24,6 +29,11 @@ func loadAd(with request: AdRequest, options: NativeAdOptions = .init()) async t
 `NativeAdView` is an open `UIView` with one optional property per asset (all
 of them are set in step 2). `NativeAdDelegate` (`@MainActor`) has two
 required methods (step 5).
+
+For a completion-based feed model, use `loadAds(with:adsCount:options:completion:)`
+from the project's startup-ready callback. Move the async example's
+success/error handling into the `Result` switch and clear the loading
+flag on both paths. Preserve the same ad ownership and rendering.
 
 ## Gotchas
 
@@ -175,9 +185,11 @@ placeholders for the app's own code.
      }
      ```
 
-   - [ ] If the project has `AdsStartup` (from get-started), keep
-     `await AdsStartup.waitUntilReady()` before the first load; otherwise
-     drop that line.
+   - [ ] Gate the first load on the project's startup/ATT readiness flow.
+     The async example uses `await AdsStartup.waitUntilReady()` from
+     get-started; a completion-based flow starts the load from its
+     readiness callback. Omit this gate only if readiness is already
+     handled elsewhere or no gate is needed.
    - [ ] One ad on a screen: a `NativeAdLoader` and a hidden `FeedNativeAdView`;
      in `viewWillAppear`, if no ad is loaded or loading, call
      `loadAd(with: AdRequest(adUnitID: "demo-native-app-yandex"))` and bind as in step 4.

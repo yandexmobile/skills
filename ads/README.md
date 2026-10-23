@@ -35,6 +35,8 @@ npx skills update
 | `yandex-mobile-ads-rewarded` | Adds a rewarded ad behind a button that offers a reward. | *Give the user 50 coins for watching a Yandex rewarded ad* |
 | `yandex-mobile-ads-app-open` | Adds an app open ad shown when the user returns to the app. | *Show a Yandex app open ad when the user returns to the app* |
 | `yandex-mobile-ads-native` | Adds native ads rendered with the app's own views, for example in a feed. | *Insert Yandex native ads into the news feed every 10 items* |
+| `yandex-mobile-ads-feed` | Adds an SDK-rendered ad feed as a standalone list or after existing content, on Android or iOS. | *Append a Yandex Feed Ad after the article list* |
+| `yandex-mobile-ads-instream` | Adds video ads to a content player: Media3, automatic ad breaks or manual In-roll/Pause-roll, with Views, Compose, UIKit or SwiftUI. | *Add Yandex pre-roll and mid-roll ads to my video player* |
 | `yandex-mobile-ads-android-migrate-to-8` | Migrates an Android app from SDK 7.x to 8.x. | *Migrate my project to Yandex Mobile Ads SDK 8* |
 | `yandex-mobile-ads-ios-migrate-to-8` | Migrates an iOS app from SDK 7.x to 8.x. | *Migrate my project from Yandex Mobile Ads SDK 7.x to 8.x* |
 
@@ -44,6 +46,11 @@ The skills insert demo ad unit IDs, such as `demo-banner-yandex`, unless you
 give your own. Create ad units in the Yandex Advertising Network interface at
 [partner.yandex.com](https://partner.yandex.com) and replace the demo IDs with
 them before publishing the app.
+
+InStream uses the video resource's Page ID. Its demo Page ID is
+`demo-instream-vmap-yandex`; replace it with your video resource's Page ID
+before publishing. The InStream skill also checks the additional iOS
+`YandexMobileAdsInstream` dependency.
 
 ## Network access
 

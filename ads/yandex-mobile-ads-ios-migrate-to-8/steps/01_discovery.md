@@ -76,7 +76,16 @@ prereleaseIdentifiers
 buildMetadataIdentifiers
 ```
 
-## 1.3 Report Findings
+## 1.3 Select the iOS API Style
+
+Apply [General Rules, section 9](../general_rules.md#9-choosing-between-completion-handler-and-asyncawait)
+before rewriting code. Read applicable project instructions and inspect
+the discovered integration's neighboring async/completion patterns. Record
+the selected approach and its reason for each affected integration/module.
+If the evidence is inconclusive, ask the user before moving to API changes.
+Keep this decision in the migration progress, without adding a log file.
+
+## 1.4 Report Findings
 
 Inform the user about:
 - Total number of files that need changes

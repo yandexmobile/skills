@@ -1,5 +1,8 @@
 # AI Integration Agent Instructions for iOS Interstitial Ads with SwiftUI
 
+Apply [iOS API selection](../SKILL.md#ios-api-selection) before using
+these examples. Adapt the snippets to the selected project conventions.
+
 ## Required Imports
 
 ```swift
@@ -23,6 +26,13 @@ enum InterstitialAdEvent {
     case didFailToShow(Error), didFailToLoad(Error), didTrackImpression(ImpressionData?)
 }
 ```
+
+The SDK view/modifier below owns loading. The API choice applies to
+the surrounding startup/readiness code; a callback-based flow updates
+the same state from its readiness callback instead of awaiting in `.task`.
+Keep the SDK view/modifier unless the project's architecture requires
+a custom loader; in that case use the [UIKit loader/view guide](ios-interstitial.md)
+and adapt its presentation to SwiftUI.
 
 ## Gotchas
 
@@ -88,9 +98,11 @@ for the app's own code.
      }
      ```
 
-   - [ ] If the project has `AdsStartup` (from get-started), keep
-     `await AdsStartup.waitUntilReady()` before the first load; otherwise
-     drop that line.
+   - [ ] Gate the first load on the project's startup/ATT readiness flow.
+     The async example uses `await AdsStartup.waitUntilReady()` from
+     get-started; a completion-based flow starts the load from its
+     readiness callback. Omit this gate only if readiness is already
+     handled elsewhere or no gate is needed.
 
 3. **Register for ad events**
 

@@ -72,7 +72,9 @@ For each step:
 
 1. **Read** [`general_rules.md`](general_rules.md)
 2. **Read** the step file (`steps/XX_name.md`)
-3. **Identify** which files from the discovery list (Step 1) are affected
+3. **Identify** which files from the discovery list (Step 1) are affected;
+   carry forward the API style selected from project rules, nearby code
+   and, where needed, the user's answer (General Rules, section 9)
 4. **If no files are affected** — report "Step N: no changes needed" and proceed
 5. **For each affected file**:
    a. Read the file

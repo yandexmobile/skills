@@ -44,7 +44,9 @@ Swift closures translate to Objective-C blocks:
 ## 6. Context Management
 
 1. Read only the **current step file**. Do not load all steps at once.
-2. Only read project files identified in Step 1 as needing migration.
+2. Focus on files identified in Step 1. Read applicable project instructions
+   and nearby code as needed to select the API style; keep edits within the
+   migration scope.
 3. If you have processed more than 3 project files since last reading the step file — re-read it to prevent drift.
 4. You can unload already completed step docs if facing context window shortage.
 
@@ -59,15 +61,30 @@ Swift closures translate to Objective-C blocks:
 
 ## 9. Choosing Between Completion Handler And Async/Await
 
-**Default: use completion handler**. It is the safest choice that works in all contexts.
+Choose the style during discovery, before applying API replacements:
 
-Use async/await ONLY when:
-1. The file is Swift (not Objective-C)
-2. The method containing the `loadAd` call is already marked `async`, OR the call site is already inside a `Task { }`
+1. Read applicable `AGENTS.md`, `CLAUDE.md` and scoped project rules.
+   Respect the user's stated preference; explicit project rules take
+   priority over nearby code and the examples in this guide.
+2. Inspect the affected screen, view model or service and similar operations
+   nearby, including task ownership, cancellation and actor isolation.
+3. Preserve the existing approach unless rules or the user require a change:
+   use async/await in an async-oriented integration, completion handlers in
+   a callback-oriented one, and blocks for Objective-C. Removed SDK 7 loader
+   delegates alone do not decide the replacement; inspect surrounding code.
+4. If rules and nearby code leave the choice unclear (mixed styles or no
+   established convention), explain the tradeoff, recommend an approach and
+   ask one focused question before rewriting the calls. Do not ask again if
+   the user already chose.
 
-If unsure, use completion handler. Do NOT introduce `Task { }` wrappers just to use async/await.
-
-**CRITICAL**: Be consistent within a single file. Do not mix completion and async styles for different loaders in the same file.
+Apply this decision to initialization, ad loading and image loading. The
+examples show both API forms without prescribing a default. A synchronous
+entry point may create `Task` when it fits the selected architecture;
+define its owner and cancellation/lifetime. Preserve error handling and
+main-actor UI updates. Keep existing async/completion bridges at module
+boundaries; consistency does not require rewriting every call in a file.
+Existing SDK SwiftUI views/modifiers can remain when they fit the project
+and format; migration does not itself require switching to manual loaders.
 
 ## 10. Step Verification
 

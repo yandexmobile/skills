@@ -6,15 +6,13 @@
 
 ## Choosing Between Completion Handler and async/await
 
-**Default: use completion handler.** It is the safest choice that works in all contexts.
-
-Use async/await ONLY when:
-1. The file is Swift (not Objective-C)
-2. The method containing the `loadAd` call is already marked `async`, OR the call site is already inside a `Task { }`
-
-If unsure, use completion handler. Do NOT introduce `Task { }` wrappers just to use async/await.
-
-**CRITICAL**: Be consistent within a single file. Do not mix completion and async styles for different loaders in the same file.
+Use the decision recorded during discovery under
+[General Rules, section 9](../general_rules.md#9-choosing-between-completion-handler-and-asyncawait).
+Project rules and surrounding code determine the replacement for the old
+loader delegates; there is no unconditional completion default. If this
+call site exposes a new ambiguity, resolve it with the user before editing.
+The examples below show both forms. Preserve the original loading state,
+error handling, ad ownership and presentation behavior in the selected form.
 
 ## Deleted Loader Delegates
 

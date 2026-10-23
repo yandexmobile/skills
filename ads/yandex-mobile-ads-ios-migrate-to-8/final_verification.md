@@ -20,6 +20,10 @@ bash "$MIGRATION_PACK/scripts/run_final_verification.sh" .
 - [ ] **All required delegate methods** are implemented for `AppOpenAdDelegate`, `InterstitialAdDelegate`, `RewardedAdDelegate`, `NativeAdDelegate`, `SliderAdDelegate`, `BannerAdViewDelegate` — they are no longer optional
 - [ ] **Dependency version** in `Podfile` or `Package.swift` is `8.0.0` or higher
 - [ ] **`@MainActor` compliance (Step 9)** — completed in code
+- [ ] **API choice** — initialization, loading and image-loading changes
+  follow the discovery decision and applicable project rules; mechanical
+  replacements have not silently changed it. New tasks have an explicit
+  owner/lifetime and cancellation behavior appropriate to the integration.
 
 ## CRITICAL: Iterative Compilation
 

@@ -1,5 +1,8 @@
 # AI Integration Agent Instructions for iOS App Open Ads
 
+Apply [iOS API selection](../SKILL.md#ios-api-selection) before using
+these examples. Adapt the snippets to the selected project conventions.
+
 ## Required Imports
 
 ```swift
@@ -12,6 +15,7 @@ import YandexMobileAds
 ```swift
 AppOpenAdLoader()
 func loadAd(with request: AdRequest) async throws -> AppOpenAd
+func loadAd(with request: AdRequest, completion: @escaping @MainActor (Result<AppOpenAd, Error>) -> Void)
 
 @MainActor final class AppOpenAd {
     weak var delegate: AppOpenAdDelegate?
@@ -20,6 +24,12 @@ func loadAd(with request: AdRequest) async throws -> AppOpenAd
 ```
 
 `AppOpenAdDelegate` (`@MainActor`) has five required methods (step 6).
+
+For completion-based integration, call `loadAd(with:completion:)` from
+the selected startup-ready callback. Move the example's success/error
+handling into the `Result` switch, retain the ad and assign its delegate
+on success, and clear the loading flag on both paths. The outer `Task`
+is only needed for the async version.
 
 ## Gotchas
 
@@ -92,9 +102,11 @@ func loadAd(with request: AdRequest) async throws -> AppOpenAd
      }
      ```
 
-   - [ ] If the project has `AdsStartup` (from get-started), keep
-     `await AdsStartup.waitUntilReady()` before the first load; otherwise
-     drop that line.
+   - [ ] Gate the first load on the project's startup/ATT readiness flow.
+     The async example uses `await AdsStartup.waitUntilReady()` from
+     get-started; a completion-based flow starts the load from its
+     readiness callback. Omit this gate only if readiness is already
+     handled elsewhere or no gate is needed.
 
 3. **Detect the moment the app comes to the foreground**
 
