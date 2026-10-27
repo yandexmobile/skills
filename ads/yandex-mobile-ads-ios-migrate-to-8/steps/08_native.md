@@ -31,7 +31,10 @@ if let media = nativeAd.adAssets.media, media.hasVideo {
 
 ## 8.3 Image Loading (`loadImages`)
 
-`loadImages()` is renamed to `loadImages(completionHandler:)`. The `NativeAdImageLoadingObserver` protocol has been **removed**.
+`NativeAdImageLoadingObserver` has been **removed**. Replace the old
+`loadImages()` plus observer with `loadImages(completionHandler:)` or
+`await loadImages()`, following the API choice recorded during discovery
+([General Rules, section 9](../general_rules.md#9-choosing-between-completion-handler-and-asyncawait)).
 
 | SDK 7                                                    | SDK 8                                                                      |
 |----------------------------------------------------------|----------------------------------------------------------------------------|

@@ -34,7 +34,13 @@ The sections below describe each rename for reference. All are executed by `appl
 
 **Lines containing** `import YandexMobileAds` are skipped for the bulk `MobileAds.*` replacement so the import line is never corrupted.
 
-**After migration**, use **`YandexAds.initializeSDK(completionHandler: nil)`**, a completion handler, or **`await YandexAds.initializeSDK()`** in async code. The script rewrites a stray non-`await` `YandexAds.initializeSDK()` → `YandexAds.initializeSDK(completionHandler: nil)`.
+The script uses `YandexAds.initializeSDK(completionHandler: nil)` as a
+mechanical replacement, including for a stray non-`await`
+`YandexAds.initializeSDK()`. After it runs, apply the API choice recorded
+during discovery: keep the completion form (with a handler if needed), or
+use `await YandexAds.initializeSDK()` in the selected async startup flow.
+The script's output does not override project rules or the user's choice.
+Preserve privacy settings before initialization and the first ad request.
 
 ### 3.2 Rename Targeting
 

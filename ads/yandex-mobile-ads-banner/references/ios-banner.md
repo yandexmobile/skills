@@ -1,5 +1,8 @@
 # AI Integration Agent Instructions for iOS Banner Ads
 
+Apply [iOS API selection](../SKILL.md#ios-api-selection) before using
+these examples. Adapt the snippets to the selected project conventions.
+
 ## Required Imports
 
 ```swift
@@ -24,6 +27,11 @@ AdRequest(adUnitID: String)
 
 `BannerAdViewDelegate` (`@MainActor`, `NSObjectProtocol`) has four required
 methods, listed in step 3.
+
+`BannerAdView.loadAd(with:)` reports loading through its delegate; it has
+no async/completion overload choice. Apply the selected style to the
+startup-ready flow around it. A callback-based flow calls `loadAd(with:)`
+from that callback without the example's `Task`.
 
 ## Gotchas
 
@@ -117,9 +125,11 @@ methods, listed in step 3.
      }
      ```
 
-   - [ ] If the project has `AdsStartup` (from get-started), keep
-     `await AdsStartup.waitUntilReady()` before the first load; otherwise
-     drop that line.
+   - [ ] Gate the first load on the project's startup/ATT readiness flow.
+     The async example uses `await AdsStartup.waitUntilReady()` from
+     get-started; a completion-based flow starts the load from its
+     readiness callback. Omit this gate only if readiness is already
+     handled elsewhere or no gate is needed.
 
 5. **Release the ad view with its screen**
 
