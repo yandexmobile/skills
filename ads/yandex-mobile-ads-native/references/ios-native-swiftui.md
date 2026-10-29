@@ -40,7 +40,7 @@ flag on both paths. Preserve the same ad ownership and rendering.
   `NativeAdContainer` content; anything else is not registered with the SDK.
 - The docs always require title, domain, warning, sponsored, feedback, call to
   action and media, plus icon and price for app install ads
-  ([components](https://ads.yandex.com/helpcenter/en/dev/ios/components.md)).
+  ([components](https://ads.yandex.com/helpcenter/en/dev/ios/components.md?utm_source=agent-skills&utm_medium=content&utm_campaign=yandex-mobile-ads-skills&utm_content=yandex-mobile-ads-native)).
   A missing required asset calls `.onAdBindingFailure`. Hidden, transparent
   or too small assets do not, but the impression is not counted. For video
   keep the card and the media at least 300 x 160 points.
@@ -183,6 +183,6 @@ app's own code.
 
 ### Links
 
-- https://ads.yandex.com/helpcenter/en/dev/ios/native.md
-- https://ads.yandex.com/helpcenter/en/dev/ios/components.md
-- https://ads.yandex.com/helpcenter/en/dev/ios/demo-blocks.md
+- https://ads.yandex.com/helpcenter/en/dev/ios/native.md?utm_source=agent-skills&utm_medium=content&utm_campaign=yandex-mobile-ads-skills&utm_content=yandex-mobile-ads-native
+- https://ads.yandex.com/helpcenter/en/dev/ios/components.md?utm_source=agent-skills&utm_medium=content&utm_campaign=yandex-mobile-ads-skills&utm_content=yandex-mobile-ads-native
+- https://ads.yandex.com/helpcenter/en/dev/ios/demo-blocks.md?utm_source=agent-skills&utm_medium=content&utm_campaign=yandex-mobile-ads-skills&utm_content=yandex-mobile-ads-native

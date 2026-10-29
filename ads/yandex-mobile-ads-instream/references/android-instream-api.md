@@ -187,5 +187,5 @@ All these operations and callbacks should run on the main thread.
   session. Do not release a shared application player without its owner's
   agreement. Teardown must not resume content.
 
-Sources: [InStream API integration](https://ads.yandex.com/helpcenter/en/dev/android/instream-advanced),
+Sources: [InStream API integration](https://ads.yandex.com/helpcenter/en/dev/android/instream-advanced?utm_source=agent-skills&utm_medium=content&utm_campaign=yandex-mobile-ads-skills&utm_content=yandex-mobile-ads-instream),
 [Android samples](https://github.com/yandexmobile/yandex-ads-sdk-android).

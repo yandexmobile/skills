@@ -27,7 +27,7 @@ from app-rendered native ads: it does not need an asset layout,
    individual native ads mixed into content. Route the latter to
    `yandex-mobile-ads-native`. These guides cover native apps; for Flutter,
    React Native, Unity or Kotlin Multiplatform, use the
-   [platform documentation](https://ads.yandex.com/helpcenter/en/dev/platforms).
+   [platform documentation](https://ads.yandex.com/helpcenter/en/dev/platforms?utm_source=agent-skills&utm_medium=content&utm_campaign=yandex-mobile-ads-skills&utm_content=yandex-mobile-ads-feed).
 2. **Check dependencies and startup.** Inspect the resolved SDK version and
    existing initialization/privacy flow. These examples target SDK 8.x.
    Migrate SDK 7.x first. If installation or initialization is missing, use
@@ -100,7 +100,7 @@ Keep SDK/UI access on the main actor.
 
 ## Documentation
 
-- [Android Feed Ad](https://ads.yandex.com/helpcenter/en/dev/android/feed-ad)
-- [Android quick start](https://ads.yandex.com/helpcenter/en/dev/android/quick-start)
-- [iOS Feed Ad](https://ads.yandex.com/helpcenter/en/dev/ios/feed-ad)
-- [iOS quick start](https://ads.yandex.com/helpcenter/en/dev/ios/quick-start)
+- [Android Feed Ad](https://ads.yandex.com/helpcenter/en/dev/android/feed-ad?utm_source=agent-skills&utm_medium=content&utm_campaign=yandex-mobile-ads-skills&utm_content=yandex-mobile-ads-feed)
+- [Android quick start](https://ads.yandex.com/helpcenter/en/dev/android/quick-start?utm_source=agent-skills&utm_medium=content&utm_campaign=yandex-mobile-ads-skills&utm_content=yandex-mobile-ads-feed)
+- [iOS Feed Ad](https://ads.yandex.com/helpcenter/en/dev/ios/feed-ad?utm_source=agent-skills&utm_medium=content&utm_campaign=yandex-mobile-ads-skills&utm_content=yandex-mobile-ads-feed)
+- [iOS quick start](https://ads.yandex.com/helpcenter/en/dev/ios/quick-start?utm_source=agent-skills&utm_medium=content&utm_campaign=yandex-mobile-ads-skills&utm_content=yandex-mobile-ads-feed)

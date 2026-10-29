@@ -196,5 +196,5 @@ declare constants at the top of the file.
 
 Additional documentation:
 
-- https://ads.yandex.com/helpcenter/en/dev/android/app-open-ad.md
-- https://ads.yandex.com/helpcenter/en/dev/android/compose/app-open-ad.md
+- https://ads.yandex.com/helpcenter/en/dev/android/app-open-ad.md?utm_source=agent-skills&utm_medium=content&utm_campaign=yandex-mobile-ads-skills&utm_content=yandex-mobile-ads-app-open
+- https://ads.yandex.com/helpcenter/en/dev/android/compose/app-open-ad.md?utm_source=agent-skills&utm_medium=content&utm_campaign=yandex-mobile-ads-skills&utm_content=yandex-mobile-ads-app-open

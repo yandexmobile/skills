@@ -76,7 +76,7 @@ existing async/completion bridges at module boundaries.
 1. **Determine the platform and the UI toolkit** from the project files.
    - Flutter, React Native, Unity or Kotlin Multiplatform project: these
      skills cover native apps only. Point the user to
-     https://ads.yandex.com/helpcenter/en/dev/platforms and stop.
+     https://ads.yandex.com/helpcenter/en/dev/platforms?utm_source=agent-skills&utm_medium=content&utm_campaign=yandex-mobile-ads-skills&utm_content=yandex-mobile-ads-interstitial and stop.
    - Android or iOS: if it is unclear, ask before proceeding. Write the code
      in the project's language. Use the Jetpack Compose or SwiftUI guide if the
      target screen is built with it, otherwise the Views or UIKit guide.

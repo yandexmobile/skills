@@ -51,7 +51,7 @@ existing async/completion bridges at module boundaries.
    - Flutter (`pubspec.yaml`), React Native (`react-native` in
      `package.json`), Unity (`ProjectSettings/ProjectVersion.txt`) or Kotlin
      Multiplatform: these skills cover native apps only. Point the user to
-     https://ads.yandex.com/helpcenter/en/dev/platforms and stop.
+     https://ads.yandex.com/helpcenter/en/dev/platforms?utm_source=agent-skills&utm_medium=content&utm_campaign=yandex-mobile-ads-skills&utm_content=yandex-mobile-ads-get-started and stop.
    - Android: `settings.gradle(.kts)` or `build.gradle(.kts)` with the Android
      Gradle plugin.
    - iOS: `*.xcodeproj`, `*.xcworkspace`, `Podfile` or `Package.swift`.
@@ -88,8 +88,9 @@ existing async/completion bridges at module boundaries.
 
 ## Rules
 
-- **Always resolve the latest released SDK version** with the command from the
-  platform guide. Never copy a version number from memory or from this skill.
+- **Always use the latest released SDK version.** Never copy a version number
+  from memory or from this skill. If you cannot check it directly, use the
+  command from the platform guide.
 - If the latest major version is newer than 8, warn the user that these
   instructions were written for SDK 8 and the API may differ.
 - Ask about the audience only if the code does not answer it: does the app

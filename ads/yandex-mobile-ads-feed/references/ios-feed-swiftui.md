@@ -115,5 +115,5 @@ another initial request. Report build and runtime results separately.
 
 ## Sources
 
-- [Feed integration](https://ads.yandex.com/helpcenter/en/dev/ios/feed-ad)
+- [Feed integration](https://ads.yandex.com/helpcenter/en/dev/ios/feed-ad?utm_source=agent-skills&utm_medium=content&utm_campaign=yandex-mobile-ads-skills&utm_content=yandex-mobile-ads-feed)
 - [Public SDK, package products and changelogs](https://github.com/yandexmobile/yandex-ads-sdk-ios)

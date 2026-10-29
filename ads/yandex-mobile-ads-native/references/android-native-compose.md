@@ -50,7 +50,7 @@ import com.yandex.mobile.ads.nativeads.Rating
 
 - **Main thread:** the SDK API and all its callbacks are `@MainThread`.
 - **Every asset needs a view.** Which assets an ad contains differs from ad to
-  ad (https://ads.yandex.com/helpcenter/en/dev/android/components.md). A
+  ad (https://ads.yandex.com/helpcenter/en/dev/android/components.md?utm_source=agent-skills&utm_medium=content&utm_campaign=yandex-mobile-ads-skills&utm_content=yandex-mobile-ads-native). A
   missing view makes binding fail on real traffic; a hidden or too small view
   binds, but the impression is not counted. Do not hide asset views yourself.
 - **Display requirements.** The ad view and asset views are opaque and lie
@@ -200,4 +200,4 @@ with the app's package.
 
 Additional documentation:
 
-- https://ads.yandex.com/helpcenter/en/dev/android/native.md
+- https://ads.yandex.com/helpcenter/en/dev/android/native.md?utm_source=agent-skills&utm_medium=content&utm_campaign=yandex-mobile-ads-skills&utm_content=yandex-mobile-ads-native

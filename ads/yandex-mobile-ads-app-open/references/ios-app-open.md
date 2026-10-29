@@ -194,5 +194,5 @@ is only needed for the async version.
 
 ### Links
 
-- https://ads.yandex.com/helpcenter/en/dev/ios/app-open-ad.md
-- https://ads.yandex.com/helpcenter/en/dev/ios/demo-blocks.md
+- https://ads.yandex.com/helpcenter/en/dev/ios/app-open-ad.md?utm_source=agent-skills&utm_medium=content&utm_campaign=yandex-mobile-ads-skills&utm_content=yandex-mobile-ads-app-open
+- https://ads.yandex.com/helpcenter/en/dev/ios/demo-blocks.md?utm_source=agent-skills&utm_medium=content&utm_campaign=yandex-mobile-ads-skills&utm_content=yandex-mobile-ads-app-open

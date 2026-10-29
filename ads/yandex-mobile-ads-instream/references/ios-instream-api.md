@@ -33,7 +33,7 @@ release's deployment target and toolchain requirements. Do not add a second
 startup/consent flow.
 
 Sources for resolving dependencies:
-[integration](https://ads.yandex.com/helpcenter/en/dev/ios/quick-start),
+[integration](https://ads.yandex.com/helpcenter/en/dev/ios/quick-start?utm_source=agent-skills&utm_medium=content&utm_campaign=yandex-mobile-ads-skills&utm_content=yandex-mobile-ads-instream),
 [package and podspecs](https://github.com/yandexmobile/yandex-ads-sdk-ios),
 [InStream pod versions](https://trunk.cocoapods.org/api/v1/pods/YandexMobileAdsInstream).
 
@@ -268,5 +268,5 @@ On final screen exit/content replacement, call an explicit main-actor cleanup:
 Do not rely solely on `deinit` for main-actor teardown. For reusable cells or
 SwiftUI wrappers, cleanup must occur while the owner is still accessible.
 
-Sources: [InStream integration](https://ads.yandex.com/helpcenter/en/dev/ios/instream-advanced),
+Sources: [InStream integration](https://ads.yandex.com/helpcenter/en/dev/ios/instream-advanced?utm_source=agent-skills&utm_medium=content&utm_campaign=yandex-mobile-ads-skills&utm_content=yandex-mobile-ads-instream),
 [iOS SDK and sample](https://github.com/yandexmobile/yandex-ads-sdk-ios).

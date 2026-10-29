@@ -16,7 +16,7 @@ implementation("androidx.media3:media3-ui:<same-compatible-version>")
 
 Retain the app's HLS/DASH modules if its content needs them. Resolve
 compatibility with the installed Yandex SDK and
-[the integration guide](https://ads.yandex.com/helpcenter/en/dev/android/instream-based);
+[the integration guide](https://ads.yandex.com/helpcenter/en/dev/android/instream-based?utm_source=agent-skills&utm_medium=content&utm_campaign=yandex-mobile-ads-skills&utm_content=yandex-mobile-ads-instream);
 do not blindly select the newest Media3 release or mix Media3 versions. The
 guide's dependency numbers are examples, not a promise for every SDK release.
 
@@ -130,6 +130,6 @@ session, not repeated `prepare()` calls from an error callback.
 - Exercise the [shared verification cases](../SKILL.md#verification), with
   particular attention to ad-to-content transitions and background restore.
 
-Sources: [Yandex Media3 integration](https://ads.yandex.com/helpcenter/en/dev/android/instream-based),
+Sources: [Yandex Media3 integration](https://ads.yandex.com/helpcenter/en/dev/android/instream-based?utm_source=agent-skills&utm_medium=content&utm_campaign=yandex-mobile-ads-skills&utm_content=yandex-mobile-ads-instream),
 [Android integration samples](https://github.com/yandexmobile/yandex-ads-sdk-android),
 [Media3 ad insertion](https://developer.android.com/media/media3/exoplayer/ad-insertion).

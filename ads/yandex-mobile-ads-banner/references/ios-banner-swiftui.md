@@ -131,6 +131,6 @@ code.
 
 ### Links
 
-- https://ads.yandex.com/helpcenter/en/dev/ios/swiftui/adaptive-sticky-banner.md
-- https://ads.yandex.com/helpcenter/en/dev/ios/swiftui/adaptive-inline-banner.md
-- https://ads.yandex.com/helpcenter/en/dev/ios/demo-blocks.md
+- https://ads.yandex.com/helpcenter/en/dev/ios/swiftui/adaptive-sticky-banner.md?utm_source=agent-skills&utm_medium=content&utm_campaign=yandex-mobile-ads-skills&utm_content=yandex-mobile-ads-banner
+- https://ads.yandex.com/helpcenter/en/dev/ios/swiftui/adaptive-inline-banner.md?utm_source=agent-skills&utm_medium=content&utm_campaign=yandex-mobile-ads-skills&utm_content=yandex-mobile-ads-banner
+- https://ads.yandex.com/helpcenter/en/dev/ios/demo-blocks.md?utm_source=agent-skills&utm_medium=content&utm_campaign=yandex-mobile-ads-skills&utm_content=yandex-mobile-ads-banner
