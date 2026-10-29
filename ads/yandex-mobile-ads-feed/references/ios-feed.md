@@ -157,6 +157,6 @@ two data sources or copy the standalone wiring over it.
 
 ## Sources
 
-- [Feed integration](https://ads.yandex.com/helpcenter/en/dev/ios/feed-ad)
-- [SDK integration](https://ads.yandex.com/helpcenter/en/dev/ios/quick-start)
+- [Feed integration](https://ads.yandex.com/helpcenter/en/dev/ios/feed-ad?utm_source=agent-skills&utm_medium=content&utm_campaign=yandex-mobile-ads-skills&utm_content=yandex-mobile-ads-feed)
+- [SDK integration](https://ads.yandex.com/helpcenter/en/dev/ios/quick-start?utm_source=agent-skills&utm_medium=content&utm_campaign=yandex-mobile-ads-skills&utm_content=yandex-mobile-ads-feed)
 - [Public SDK and samples](https://github.com/yandexmobile/yandex-ads-sdk-ios)

@@ -172,4 +172,4 @@ file.
 
 Additional documentation:
 
-- https://ads.yandex.com/helpcenter/en/dev/android/compose/interstitial.md
+- https://ads.yandex.com/helpcenter/en/dev/android/compose/interstitial.md?utm_source=agent-skills&utm_medium=content&utm_campaign=yandex-mobile-ads-skills&utm_content=yandex-mobile-ads-interstitial

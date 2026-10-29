@@ -95,4 +95,4 @@ adapter. Build the actual app target and report device checks separately.
 ## Sources
 
 - [Android Views interoperability](https://developer.android.com/develop/ui/compose/migrate/interoperability-apis/views-in-compose)
-- [Feed integration](https://ads.yandex.com/helpcenter/en/dev/android/feed-ad)
+- [Feed integration](https://ads.yandex.com/helpcenter/en/dev/android/feed-ad?utm_source=agent-skills&utm_medium=content&utm_campaign=yandex-mobile-ads-skills&utm_content=yandex-mobile-ads-feed)

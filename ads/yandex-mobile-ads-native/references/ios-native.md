@@ -42,7 +42,7 @@ flag on both paths. Preserve the same ad ownership and rendering.
   is a layout to copy. The SDK fills the asset views: do not change them.
 - The docs always require title, domain, warning, sponsored, feedback, call to
   action and media, plus icon and price for app install ads
-  ([components](https://ads.yandex.com/helpcenter/en/dev/ios/components.md)).
+  ([components](https://ads.yandex.com/helpcenter/en/dev/ios/components.md?utm_source=agent-skills&utm_medium=content&utm_campaign=yandex-mobile-ads-skills&utm_content=yandex-mobile-ads-native)).
 - `bind(with:)` throws `NativeErrorCode.noViewForAsset` or
   `.invalidViewForBinding` (SDK 8.4.0+; on 8.0–8.3 compare
   `(error as NSError).code`). Hidden, transparent or too small asset views do
@@ -261,6 +261,6 @@ placeholders for the app's own code.
 
 ### Links
 
-- https://ads.yandex.com/helpcenter/en/dev/ios/native.md
-- https://ads.yandex.com/helpcenter/en/dev/ios/components.md
-- https://ads.yandex.com/helpcenter/en/dev/ios/demo-blocks.md
+- https://ads.yandex.com/helpcenter/en/dev/ios/native.md?utm_source=agent-skills&utm_medium=content&utm_campaign=yandex-mobile-ads-skills&utm_content=yandex-mobile-ads-native
+- https://ads.yandex.com/helpcenter/en/dev/ios/components.md?utm_source=agent-skills&utm_medium=content&utm_campaign=yandex-mobile-ads-skills&utm_content=yandex-mobile-ads-native
+- https://ads.yandex.com/helpcenter/en/dev/ios/demo-blocks.md?utm_source=agent-skills&utm_medium=content&utm_campaign=yandex-mobile-ads-skills&utm_content=yandex-mobile-ads-native

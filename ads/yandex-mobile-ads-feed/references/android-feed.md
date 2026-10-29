@@ -156,5 +156,5 @@ create a new one with the updated appearance.
 
 ## Sources
 
-- [Feed integration](https://ads.yandex.com/helpcenter/en/dev/android/feed-ad)
+- [Feed integration](https://ads.yandex.com/helpcenter/en/dev/android/feed-ad?utm_source=agent-skills&utm_medium=content&utm_campaign=yandex-mobile-ads-skills&utm_content=yandex-mobile-ads-feed)
 - [Public SDK sample](https://github.com/yandexmobile/yandex-ads-sdk-android)

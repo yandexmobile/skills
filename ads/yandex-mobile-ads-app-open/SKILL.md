@@ -85,7 +85,7 @@ existing async/completion bridges at module boundaries.
 1. **Determine the platform** from the project files.
    - Flutter, React Native, Unity or Kotlin Multiplatform project: these
      skills cover native apps only. Point the user to
-     https://ads.yandex.com/helpcenter/en/dev/platforms and stop.
+     https://ads.yandex.com/helpcenter/en/dev/platforms?utm_source=agent-skills&utm_medium=content&utm_campaign=yandex-mobile-ads-skills&utm_content=yandex-mobile-ads-app-open and stop.
    - Android or iOS: if it is unclear, ask before proceeding. Write the code
      in the project's language.
 

@@ -26,7 +26,7 @@ video. A break can contain several creatives (an AdPod).
    choosing APIs. Keep the existing player and dependency manager when possible.
    - These guides cover native Android/iOS apps. For Flutter, React Native,
      Unity or Kotlin Multiplatform, use the
-     [platform documentation](https://ads.yandex.com/helpcenter/en/dev/platforms).
+     [platform documentation](https://ads.yandex.com/helpcenter/en/dev/platforms?utm_source=agent-skills&utm_medium=content&utm_campaign=yandex-mobile-ads-skills&utm_content=yandex-mobile-ads-instream).
      Do not treat generated native folders as an independent native app.
    - Distinguish an ad inside a video from a rewarded ad or native feed item.
      Ask only for information that the request and project do not establish.
@@ -80,7 +80,7 @@ video. A break can contain several creatives (an AdPod).
   Do not add a second client timer for breaks already controlled by Binder.
 - A request for one specific break is a separate API. Its inputs differ
   between platforms; see the platform guide before accepting an ID or URL.
-- See [video resource setup](https://ads.yandex.com/helpcenter/en/monetization/ad-unit/instream)
+- See [video resource setup](https://ads.yandex.com/helpcenter/en/monetization/ad-unit/instream?utm_source=agent-skills&utm_medium=content&utm_campaign=yandex-mobile-ads-skills&utm_content=yandex-mobile-ads-instream)
   for production configuration. A working demo does not prove that a
   production video resource is configured.
 
@@ -139,5 +139,5 @@ the cases relevant to the chosen path, reporting untested cases explicitly:
   or lifecycle pause does not itself trigger another Pause-roll.
 - Compose recomposition/SwiftUI updates and list reuse do not repeat loads.
 
-Sources: [Android overview](https://ads.yandex.com/helpcenter/en/dev/android/instream),
-[iOS overview](https://ads.yandex.com/helpcenter/en/dev/ios/instream).
+Sources: [Android overview](https://ads.yandex.com/helpcenter/en/dev/android/instream?utm_source=agent-skills&utm_medium=content&utm_campaign=yandex-mobile-ads-skills&utm_content=yandex-mobile-ads-instream),
+[iOS overview](https://ads.yandex.com/helpcenter/en/dev/ios/instream?utm_source=agent-skills&utm_medium=content&utm_campaign=yandex-mobile-ads-skills&utm_content=yandex-mobile-ads-instream).

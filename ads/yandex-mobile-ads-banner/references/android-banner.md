@@ -155,5 +155,5 @@ use the app's own names and declare constants at the top of the file.
 
 Additional documentation:
 
-- https://ads.yandex.com/helpcenter/en/dev/android/adaptive-sticky-banner.md
-- https://ads.yandex.com/helpcenter/en/dev/android/adaptive-inline-banner.md
+- https://ads.yandex.com/helpcenter/en/dev/android/adaptive-sticky-banner.md?utm_source=agent-skills&utm_medium=content&utm_campaign=yandex-mobile-ads-skills&utm_content=yandex-mobile-ads-banner
+- https://ads.yandex.com/helpcenter/en/dev/android/adaptive-inline-banner.md?utm_source=agent-skills&utm_medium=content&utm_campaign=yandex-mobile-ads-skills&utm_content=yandex-mobile-ads-banner
